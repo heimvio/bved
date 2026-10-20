@@ -1,0 +1,30 @@
+[
+ {
+  "code": "01",
+  "label": "Braunkohle"
+ },
+ {
+  "code": "02",
+  "label": "Steinkohle"
+ },
+ {
+  "code": "03",
+  "label": "Erdöl/Heizöl"
+ },
+ {
+  "code": "04",
+  "label": "Erdgas"
+ },
+ {
+  "code": "05",
+  "label": "Kernenergie"
+ },
+ {
+  "code": "06",
+  "label": "Erneuerbare Energien"
+ },
+ {
+  "code": "99",
+  "label": "Sonstige"
+ }
+]

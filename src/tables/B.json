@@ -1,0 +1,186 @@
+[
+ {
+  "code": "111",
+  "label": "Leichtes Heizöl in Liter"
+ },
+ {
+  "code": "112",
+  "label": "Leichtes Heizöl in kg"
+ },
+ {
+  "code": "119",
+  "label": "Leichtes Heizöl lt. Uhr"
+ },
+ {
+  "code": "122",
+  "label": "Koks in kg"
+ },
+ {
+  "code": "123",
+  "label": "Holzpellets in kg"
+ },
+ {
+  "code": "124",
+  "label": "Holzpellets in Tonnen"
+ },
+ {
+  "code": "125",
+  "label": "Holzpellets in kWh"
+ },
+ {
+  "code": "133",
+  "label": "Erdgas L (leicht) in m3"
+ },
+ {
+  "code": "134",
+  "label": "Erdgas L (leicht) in kWh"
+ },
+ {
+  "code": "135",
+  "label": "Erdgas L (leicht) in MWh"
+ },
+ {
+  "code": "136",
+  "label": "Erdgas L (leicht) in GJ"
+ },
+ {
+  "code": "142",
+  "label": "Nahwärme in kWh"
+ },
+ {
+  "code": "143",
+  "label": "Nahwärme in MWh"
+ },
+ {
+  "code": "144",
+  "label": "Fernwärme in kWh"
+ },
+ {
+  "code": "145",
+  "label": "Fernwärme in MWh"
+ },
+ {
+  "code": "146",
+  "label": "Fernwärme in GJ"
+ },
+ {
+  "code": "147",
+  "label": "Fernwärme in Tonnen"
+ },
+ {
+  "code": "148",
+  "label": "Fernwärme in m3"
+ },
+ {
+  "code": "151",
+  "label": "Flüssiggas in Liter"
+ },
+ {
+  "code": "152",
+  "label": "Flüssiggas in kg"
+ },
+ {
+  "code": "153",
+  "label": "Flüssiggas in m3"
+ },
+ {
+  "code": "154",
+  "label": "Flüssiggas in kWh"
+ },
+ {
+  "code": "164",
+  "label": "Strom in kWh"
+ },
+ {
+  "code": "165",
+  "label": "Strom in MWh"
+ },
+ {
+  "code": "173",
+  "label": "Kokereigas in m3"
+ },
+ {
+  "code": "174",
+  "label": "Kokereigas in kWh"
+ },
+ {
+  "code": "175",
+  "label": "Kokereigas in MWh"
+ },
+ {
+  "code": "176",
+  "label": "Kokereigas in GJ"
+ },
+ {
+  "code": "193",
+  "label": "Erdgas H (schwer) in m3"
+ },
+ {
+  "code": "194",
+  "label": "Erdgas H (schwer) kWh"
+ },
+ {
+  "code": "195",
+  "label": "Erdgas H (schwer) MWh"
+ },
+ {
+  "code": "196",
+  "label": "Erdgas H (schwer) in GJ"
+ },
+ {
+  "code": "197",
+  "label": "Holz in Ster"
+ },
+ {
+  "code": "198",
+  "label": "Holz (lufttrocken) in kg"
+ },
+ {
+  "code": "199",
+  "label": "Holzhackschnitzel in SRm"
+ },
+ {
+  "code": "200",
+  "label": "Erdwärme"
+ },
+ {
+  "code": "201",
+  "label": "Schweres Heizöl in Liter"
+ },
+ {
+  "code": "202",
+  "label": "Braunkohle in kg"
+ },
+ {
+  "code": "203",
+  "label": "Steinkohle in kg"
+ },
+ {
+  "code": "204",
+  "label": "Bio-Gas in cbm"
+ },
+ {
+  "code": "205",
+  "label": "Bio-Gas in kWh"
+ },
+ {
+  "code": "206",
+  "label": "Strom für Wärmepumpe in kWh"
+ },
+ {
+  "code": "207",
+  "label": "Strom für Wärmepumpe in MWh"
+ },
+ {
+  "code": "208",
+  "label": "Strom für Wärmepumpe in GJ"
+ },
+ {
+  "code": "209",
+  "label": "Solar-Energie in kWh"
+ },
+ {
+  "code": "211",
+  "label": "Holzhackschnitzel in kg"
+ }
+]

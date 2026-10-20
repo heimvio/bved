@@ -1,0 +1,918 @@
+[
+ {
+  "code": "01",
+  "label": "Webservice Fremdabrechner alphanKenn"
+ },
+ {
+  "code": "02",
+  "label": "W&W Messtechnik"
+ },
+ {
+  "code": "03",
+  "label": "Stadtwerke Delitzsch GmbH"
+ },
+ {
+  "code": "04",
+  "label": "TMZ"
+ },
+ {
+  "code": "05",
+  "label": "WVG Greifswald"
+ },
+ {
+  "code": "06",
+  "label": "VoWo Service"
+ },
+ {
+  "code": "07",
+  "label": "GWS Service"
+ },
+ {
+  "code": "08",
+  "label": "Stadtwerke Prenzlau"
+ },
+ {
+  "code": "09",
+  "label": "Stadtwerke Werdau"
+ },
+ {
+  "code": "10",
+  "label": "SRH Mess-& Systemtechnik GmbH & Co KG"
+ },
+ {
+  "code": "11",
+  "label": "Messkec KG"
+ },
+ {
+  "code": "12",
+  "label": "Molls GmbH"
+ },
+ {
+  "code": "13",
+  "label": "HGH Service & Abrechnungen GmbH"
+ },
+ {
+  "code": "14",
+  "label": "HP Heizkosten Plattform GmbH"
+ },
+ {
+  "code": "15",
+  "label": "Thermo-Tronic GmbH"
+ },
+ {
+  "code": "16",
+  "label": "GuWo.services GmbH Guben"
+ },
+ {
+  "code": "17",
+  "label": "Flüwo"
+ },
+ {
+  "code": "18",
+  "label": "FBV Flensburg"
+ },
+ {
+  "code": "19",
+  "label": "Bauverein Energie & Service GmbH"
+ },
+ {
+  "code": "20",
+  "label": "IBAEnergie"
+ },
+ {
+  "code": "21",
+  "label": "Müller Mess-Wärme"
+ },
+ {
+  "code": "22",
+  "label": "DIGImeto GmbH & Co. KG"
+ },
+ {
+  "code": "23",
+  "label": "Di.wa-Projektgesellschaft mbH"
+ },
+ {
+  "code": "24",
+  "label": "DIWO"
+ },
+ {
+  "code": "25",
+  "label": "SBV Solingen"
+ },
+ {
+  "code": "26",
+  "label": "VGW Facility Management"
+ },
+ {
+  "code": "27",
+  "label": "Thermomess"
+ },
+ {
+  "code": "28",
+  "label": "Somentec Software GmbH"
+ },
+ {
+  "code": "29",
+  "label": "Städtische Werke Magdeburg"
+ },
+ {
+  "code": "30",
+  "label": "Techem, Eschborn"
+ },
+ {
+  "code": "31",
+  "label": "Brunata, Hamburg"
+ },
+ {
+  "code": "32",
+  "label": "Brunata, Köln"
+ },
+ {
+  "code": "33",
+  "label": "Brunata-Minol, Stuttgart"
+ },
+ {
+  "code": "34",
+  "label": "Brunata, München"
+ },
+ {
+  "code": "35",
+  "label": "Landis und Gyr, Berlin"
+ },
+ {
+  "code": "36",
+  "label": "Wärmemeßdienst Altmark GmbH"
+ },
+ {
+  "code": "37",
+  "label": "BFW, München"
+ },
+ {
+  "code": "38",
+  "label": "BFW, Karlsruhe"
+ },
+ {
+  "code": "39",
+  "label": "BeyerIBIA"
+ },
+ {
+  "code": "40",
+  "label": "ista Deutschland GmbH, Essen"
+ },
+ {
+  "code": "41",
+  "label": "Kalorimeta, Hamburg"
+ },
+ {
+  "code": "42",
+  "label": "ENDACOM, Frankfurt"
+ },
+ {
+  "code": "43",
+  "label": "Schyma GmbH, Muehltal"
+ },
+ {
+  "code": "44",
+  "label": "energie Control, Bochum"
+ },
+ {
+  "code": "45",
+  "label": "WMA-Service, Woltersdorf"
+ },
+ {
+  "code": "47",
+  "label": "DUO2000, Hemsbach"
+ },
+ {
+  "code": "48",
+  "label": "A+S GmbH, Willich"
+ },
+ {
+  "code": "49",
+  "label": "Eck. Meier GmbH, Braunschweig"
+ },
+ {
+  "code": "50",
+  "label": "KuGu Home GmbH"
+ },
+ {
+  "code": "51",
+  "label": "Stegmeier Messtechnik, Flein"
+ },
+ {
+  "code": "52",
+  "label": "Tenie und Gores, Wesel"
+ },
+ {
+  "code": "53",
+  "label": "Skibatron, Herne"
+ },
+ {
+  "code": "54",
+  "label": "EAD, Gera"
+ },
+ {
+  "code": "55",
+  "label": "Wärme-Komfort, Hamburg"
+ },
+ {
+  "code": "56",
+  "label": "Rohma GmbH"
+ },
+ {
+  "code": "57",
+  "label": "DHC Mess Team, Bad Deckenstedt"
+ },
+ {
+  "code": "58",
+  "label": "MESSTRONIC Mörner, Gräfenwiesbach"
+ },
+ {
+  "code": "59",
+  "label": "dataREAL Magdeburg"
+ },
+ {
+  "code": "60",
+  "label": "Stadtwerke Aschersleben"
+ },
+ {
+  "code": "61",
+  "label": "Stadtwerke Schoenebeck"
+ },
+ {
+  "code": "62",
+  "label": "Becker und Harms, Potsdam"
+ },
+ {
+  "code": "63",
+  "label": "EXTERN Messdienst GmbH"
+ },
+ {
+  "code": "64",
+  "label": "SBV Flensburg"
+ },
+ {
+  "code": "65",
+  "label": "Imvisio (ehem. Delta-T, Mettmann)"
+ },
+ {
+  "code": "66",
+  "label": "TDH Uwe Lerch, Hamburg"
+ },
+ {
+  "code": "67",
+  "label": "mess-wärme Heußer Gmbh"
+ },
+ {
+  "code": "68",
+  "label": "Deutsche KB, Nürnberg"
+ },
+ {
+  "code": "69",
+  "label": "Delta-T Messdienst Wenzel, Herodsberg"
+ },
+ {
+  "code": "70",
+  "label": "Delta-T Asko, Erfurt"
+ },
+ {
+  "code": "71",
+  "label": "SVM, Schloss Holte"
+ },
+ {
+  "code": "72",
+  "label": "Wärme-Mess-Service (Salzgitter)"
+ },
+ {
+  "code": "73",
+  "label": "Stadtwerke Essen"
+ },
+ {
+  "code": "74",
+  "label": "LAS Leipziger Stadtwerke"
+ },
+ {
+  "code": "75",
+  "label": "Fidentia Messdienst, Bamberg"
+ },
+ {
+  "code": "76",
+  "label": "Heimer-Concept WMD-Nord, Quickborn"
+ },
+ {
+  "code": "77",
+  "label": "Semeco, Flensburg"
+ },
+ {
+  "code": "78",
+  "label": "VGS Arnstadt"
+ },
+ {
+  "code": "79",
+  "label": "meier messtechnik GmbH"
+ },
+ {
+  "code": "80",
+  "label": "Stadtwerke Meinerzhagen"
+ },
+ {
+  "code": "81",
+  "label": "degewo Netzwerk"
+ },
+ {
+  "code": "82",
+  "label": "IMPLABAU, Neubrandenburg"
+ },
+ {
+  "code": "83",
+  "label": "MessTech GmbH"
+ },
+ {
+  "code": "84",
+  "label": "CAC Wärmemessdienst GmbH (ehem. ServCount)"
+ },
+ {
+  "code": "85",
+  "label": "Stadtwerke Augsburg"
+ },
+ {
+  "code": "86",
+  "label": "Innotec"
+ },
+ {
+  "code": "87",
+  "label": "Braunschweiger Baugenossenschaft eG"
+ },
+ {
+  "code": "88",
+  "label": "BUD BAU- UND DIENSTLEISTUNG GMBH, Schleswig"
+ },
+ {
+  "code": "89",
+  "label": "BFW - Büro für Wärmemesstechnik, Hofgeismar"
+ },
+ {
+  "code": "91",
+  "label": "Stadtwerke Rostock"
+ },
+ {
+  "code": "92",
+  "label": "Bekotec GmbH"
+ },
+ {
+  "code": "93",
+  "label": "Wohnen 1902 Cottbus"
+ },
+ {
+  "code": "94",
+  "label": "techem ehem. EON Anlagen"
+ },
+ {
+  "code": "96",
+  "label": "di.wa service-gesellschaft mbH, Schwarzheide"
+ },
+ {
+  "code": "97",
+  "label": "ABM Mess Service"
+ },
+ {
+  "code": "98",
+  "label": "WSWGW Wärme- und Servicegesellschaft mbH Chemnitz"
+ },
+ {
+  "code": "99",
+  "label": "B&O RATOMA Messdienste GmbH"
+ },
+ {
+  "code": "A1",
+  "label": "MS Messtechnik Service GmbH"
+ },
+ {
+  "code": "A2",
+  "label": "Isarwatt"
+ },
+ {
+  "code": "A3",
+  "label": "Arlinger Service Wohnen GmbH"
+ },
+ {
+  "code": "A4",
+  "label": "Delta-t Messdienst Metromess GmbH"
+ },
+ {
+  "code": "A5",
+  "label": "Exatron"
+ },
+ {
+  "code": "A6",
+  "label": "arensis GmbH"
+ },
+ {
+  "code": "A7",
+  "label": "mensura"
+ },
+ {
+  "code": "A8",
+  "label": "MMB Multi-Media-Berlin GmbH"
+ },
+ {
+  "code": "A9",
+  "label": "Gimpex"
+ },
+ {
+  "code": "B1",
+  "label": "Mühlheimer Wohnungsbau mbH"
+ },
+ {
+  "code": "B2",
+  "label": "Halberstadtwerke"
+ },
+ {
+  "code": "B3",
+  "label": "Frohe Zukunft Service"
+ },
+ {
+  "code": "B4",
+  "label": "MESSTRONIC, Schwabenheim"
+ },
+ {
+  "code": "B5",
+  "label": "dhu Service GmbH"
+ },
+ {
+  "code": "B6",
+  "label": "DCE - Data Concept Energiemessdienst GmbH & Co. KG"
+ },
+ {
+  "code": "B7",
+  "label": "dometa Freital"
+ },
+ {
+  "code": "B8",
+  "label": "Calorix GmbH"
+ },
+ {
+  "code": "B9",
+  "label": "Smarte Quartiere Ludwigsburg GbR"
+ },
+ {
+  "code": "C1",
+  "label": "Ares e-Count GmbH"
+ },
+ {
+  "code": "C2",
+  "label": "Stadtwerke Frankfurt (Oder)"
+ },
+ {
+  "code": "C3",
+  "label": "comgy"
+ },
+ {
+  "code": "C4",
+  "label": "Stadtwerke am See"
+ },
+ {
+  "code": "C5",
+  "label": "Imm-Con"
+ },
+ {
+  "code": "C6",
+  "label": "Delta-t Südostbayern"
+ },
+ {
+  "code": "C7",
+  "label": "Weser Ablesedienst GmbH"
+ },
+ {
+  "code": "C8",
+  "label": "Mess-u.Abrechnungsservice Sylvia Overhage"
+ },
+ {
+  "code": "C9",
+  "label": "Kupferschmid Abrechnungsservice GmbH"
+ },
+ {
+  "code": "D1",
+  "label": "Wigewe"
+ },
+ {
+  "code": "D2",
+  "label": "FT Engergiepartner"
+ },
+ {
+  "code": "D3",
+  "label": "EAD Wolfen GmbH"
+ },
+ {
+  "code": "D5",
+  "label": "Eisenbahner-Wohnungsbaugenossenschaft Dresden eG"
+ },
+ {
+  "code": "D6",
+  "label": "Delta-t Messdienst GmbH Pegnitz"
+ },
+ {
+  "code": "D7",
+  "label": "Delta-t Messdienst GbR Pleystein"
+ },
+ {
+  "code": "D8",
+  "label": "Delta-t Messdienst & Consulting Rudolstadt GmbH"
+ },
+ {
+  "code": "D9",
+  "label": "aliter energy GmbH"
+ },
+ {
+  "code": "E1",
+  "label": "Technische Werke Schussental GmbH & Co. KG"
+ },
+ {
+  "code": "E2",
+  "label": "Schütz Heizkostenservice e.K."
+ },
+ {
+  "code": "E3",
+  "label": "ALPHA MESS Bergisch-Land GmbH"
+ },
+ {
+  "code": "E4",
+  "label": "asko GmbH"
+ },
+ {
+  "code": "E5",
+  "label": "BFW Ternes GmbH"
+ },
+ {
+  "code": "E6",
+  "label": "Böhm Verwaltungs GmbH"
+ },
+ {
+  "code": "E7",
+  "label": "dataREAL Messtechnik GmbH"
+ },
+ {
+  "code": "E8",
+  "label": "Dietsch GmbH Abrechnungsservice"
+ },
+ {
+  "code": "E9",
+  "label": "Ditschun Wärmemesstechnik GmbH"
+ },
+ {
+  "code": "F1",
+  "label": "Exakta Kalorex GmbH"
+ },
+ {
+  "code": "F2",
+  "label": "INHA GmbH"
+ },
+ {
+  "code": "F3",
+  "label": "MATEC Wolski Gesellschaft für Mess- und Abrechnungstechnik"
+ },
+ {
+  "code": "F4",
+  "label": "MAW Service GmbH"
+ },
+ {
+  "code": "F5",
+  "label": "Messteam 2000 GmbH"
+ },
+ {
+  "code": "F6",
+  "label": "Messwert Unternehmen für Messdienstleistungen GmbH"
+ },
+ {
+  "code": "F7",
+  "label": "SANNcompact GmbH"
+ },
+ {
+  "code": "F8",
+  "label": "Wärmemessdienst Weise GmbH"
+ },
+ {
+  "code": "F9",
+  "label": "enco Energy Services GmbH"
+ },
+ {
+  "code": "G1",
+  "label": "Aqua Calor GmbH"
+ },
+ {
+  "code": "G2",
+  "label": "UNIPLUS GmbH Hettel"
+ },
+ {
+  "code": "G3",
+  "label": "BFW Dieter Ritter GmbH"
+ },
+ {
+  "code": "G4",
+  "label": "WSWGE Wärme- und Servicegesellschaft mbH Chemnitz"
+ },
+ {
+  "code": "G5",
+  "label": "Stadtwerke Torgau GmbH"
+ },
+ {
+  "code": "G6",
+  "label": "SolMess GmbH"
+ },
+ {
+  "code": "G7",
+  "label": "Torgelower Gemeinnützigen Wohnungsgenossenschaft eG"
+ },
+ {
+  "code": "G8",
+  "label": "varys. Gesellschaft für Software und Abrechnung mbH"
+ },
+ {
+  "code": "G9",
+  "label": "MET Medien-Energie-Technik GmbH"
+ },
+ {
+  "code": "H1",
+  "label": "AMVD Abrechnungs GmbH"
+ },
+ {
+  "code": "H2",
+  "label": "Delta-T Wolni GmbH & Co KG"
+ },
+ {
+  "code": "H3",
+  "label": "Stadtwerke Brühl GmbH"
+ },
+ {
+  "code": "H4",
+  "label": "INTERN Heizkontroll-Gesellschaft mbH"
+ },
+ {
+  "code": "H5",
+  "label": "INTERN Heizkontroll-Gesellschaft mbH & Co. KG"
+ },
+ {
+  "code": "H6",
+  "label": "Energie Mittelsachsen GmbH"
+ },
+ {
+  "code": "H7",
+  "label": "Stadtwerke Heidelberg"
+ },
+ {
+  "code": "H8",
+  "label": "Wärmemessdienst Hänsel GmbH"
+ },
+ {
+  "code": "H9",
+  "label": "Conlivo GmbH"
+ },
+ {
+  "code": "I1",
+  "label": "ChomTec GmbH"
+ },
+ {
+  "code": "I2",
+  "label": "Messtechnik Gengenbach"
+ },
+ {
+  "code": "I3",
+  "label": "Akkurat Plus Wärmemessdienst"
+ },
+ {
+  "code": "I4",
+  "label": "Energie Service Seifert"
+ },
+ {
+  "code": "I5",
+  "label": "Hausabrechnung Leipzig GmbH"
+ },
+ {
+  "code": "I6",
+  "label": "H1 CONCEPT GmbH"
+ },
+ {
+  "code": "I7",
+  "label": "Fa. Gauß Heizung Bad Klima GmbH"
+ },
+ {
+  "code": "I8",
+  "label": "EAD Eutermoser GmbH, Stephanskirchen"
+ },
+ {
+  "code": "I9",
+  "label": "Stadtwerke Zeitz GmbH"
+ },
+ {
+  "code": "J1",
+  "label": "Domo-Therm"
+ },
+ {
+  "code": "J2",
+  "label": "Stadtwerke Troisdorf GmbH"
+ },
+ {
+  "code": "J3",
+  "label": "Unimess Duhr GmbH"
+ },
+ {
+  "code": "J4",
+  "label": "Hecon Abrechnungssysteme GmbH"
+ },
+ {
+  "code": "J5",
+  "label": "TOMKON GmbH – Ihr regionaler Messdienst in Berlin"
+ },
+ {
+  "code": "J6",
+  "label": "Versorgungsbetriebe Hann. Münden GmbH"
+ },
+ {
+  "code": "J7",
+  "label": "RMD GmbH"
+ },
+ {
+  "code": "J8",
+  "label": "ZP Zähler Plattform GmbH"
+ },
+ {
+  "code": "J9",
+  "label": "ZP Zuhause Plattform GmbH"
+ },
+ {
+  "code": "K1",
+  "label": "Stadtwerke Göttingen"
+ },
+ {
+  "code": "K2",
+  "label": "Messteam Nord GmbH"
+ },
+ {
+  "code": "K3",
+  "label": "Messteam West GmbH"
+ },
+ {
+  "code": "K4",
+  "label": "PROMOS consult"
+ },
+ {
+  "code": "K5",
+  "label": "SÜC Energie und H2O GmbH"
+ },
+ {
+  "code": "K6",
+  "label": "Promess GmbH"
+ },
+ {
+  "code": "K7",
+  "label": "HERZ Messtechnik GmbH"
+ },
+ {
+  "code": "K8",
+  "label": "Energy Consulting & Home Service Zwickau GmbH"
+ },
+ {
+  "code": "K9",
+  "label": "Delta-t Omicevic GmbH & Co. KG"
+ },
+ {
+  "code": "L1",
+  "label": "Immobilien-Service-Gesellschaft Niederlausitz mbH"
+ },
+ {
+  "code": "L2",
+  "label": "EAD Zeulenroda GmbH"
+ },
+ {
+  "code": "L3",
+  "label": "Hermanns mess wärme"
+ },
+ {
+  "code": "L4",
+  "label": "Objektus"
+ },
+ {
+  "code": "L6",
+  "label": "VOBECO Wärme & Wasser Abrechnungsgesellschaft GmbH"
+ },
+ {
+  "code": "L7",
+  "label": "thermika Wärmemessdienst GmbH"
+ },
+ {
+  "code": "L8",
+  "label": "AssetEnergy GmbH"
+ },
+ {
+  "code": "L9",
+  "label": "Energieversorgung Oberhausen Aktiengesellschaft"
+ },
+ {
+  "code": "M1",
+  "label": "ENVEDI immobilien GmbH"
+ },
+ {
+  "code": "M2",
+  "label": "Fresch Haustechnik"
+ },
+ {
+  "code": "M3",
+  "label": "Schuka"
+ },
+ {
+  "code": "M4",
+  "label": "Stadtwerke Lutherstadt Eisleben GmbH"
+ },
+ {
+  "code": "M5",
+  "label": "EAD, Leipzig"
+ },
+ {
+  "code": "M6",
+  "label": "envia Mitteldeutsche Energie AG"
+ },
+ {
+  "code": "M7",
+  "label": "Wohnungsbau Sonneberg"
+ },
+ {
+  "code": "M8",
+  "label": "DOMO-THERM Messtechnik GmbH & Co. KG."
+ },
+ {
+  "code": "M9",
+  "label": "Stadtwerke Amberg Versorgungs GmbH"
+ },
+ {
+  "code": "N1",
+  "label": "EAD Jürgen Schulga"
+ },
+ {
+  "code": "N2",
+  "label": "Stadtwerke Karlsruhe Netzservice GmbH"
+ },
+ {
+  "code": "N3",
+  "label": "EAD Main-Kinzig GmbH"
+ },
+ {
+  "code": "N4",
+  "label": "Stadtwerke Velbert GmbH"
+ },
+ {
+  "code": "N5",
+  "label": "MeAb Messen und Abrechnen GmbH"
+ },
+ {
+  "code": "N6",
+  "label": "Immonero - Flendermedia"
+ },
+ {
+  "code": "N7",
+  "label": "MessKom Messtechnik und Gebäudemanagement GmbH"
+ },
+ {
+  "code": "N8",
+  "label": "BFU Mess- und Wärmedienst"
+ },
+ {
+  "code": "N9",
+  "label": "rapp mess technik Olaf Rappold e.K."
+ },
+ {
+  "code": "O1",
+  "label": "Stadtwerke Stendal GmbH"
+ },
+ {
+  "code": "O2",
+  "label": "SWS Energie GmbH"
+ },
+ {
+  "code": "O3",
+  "label": "EAD Dirnberger GmbH"
+ },
+ {
+  "code": "O4",
+  "label": "OH Service GmbH"
+ },
+ {
+  "code": "O5",
+  "label": "Vertus-Messdienst GmbH"
+ },
+ {
+  "code": "O6",
+  "label": "Enervie Service GmbH"
+ },
+ {
+  "code": "O7",
+  "label": "W-Serv GmbH"
+ },
+ {
+  "code": "O8",
+  "label": "WGL Wohnungsgesellschaft Leverkusen Service GmbH"
+ },
+ {
+  "code": "O9",
+  "label": "sewatec"
+ }
+]

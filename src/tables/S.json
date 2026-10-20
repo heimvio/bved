@@ -1,0 +1,58 @@
+[
+ {
+  "code": "1",
+  "label": "Schätzung"
+ },
+ {
+  "code": "2",
+  "label": "Schätzung nach Vorjahr"
+ },
+ {
+  "code": "3",
+  "label": "Schätzung nach Normwärmeleistung"
+ },
+ {
+  "code": "4",
+  "label": "Schätzung nach Grundanteil (z. B. 1 WMZ pro Nutzeinheit)"
+ },
+ {
+  "code": "5",
+  "label": "Teilschätzung"
+ },
+ {
+  "code": "6",
+  "label": "Schätzung nach Fläche"
+ },
+ {
+  "code": "7",
+  "label": "Schätzung nach vergleichbaren Zeiträumen"
+ },
+ {
+  "code": "8",
+  "label": "Schätzung nach Durchschnittsverbrauch"
+ },
+ {
+  "code": "10",
+  "label": "nur Kostenlieferung"
+ },
+ {
+  "code": "11",
+  "label": "Hauptablesung"
+ },
+ {
+  "code": "12",
+  "label": "Zwischenablesung"
+ },
+ {
+  "code": "13",
+  "label": "Aufteilung nach Tagen"
+ },
+ {
+  "code": "14",
+  "label": "Aufteilung nach Gradtagen"
+ },
+ {
+  "code": "15",
+  "label": "Schätzung nach vergleichbaren Räumen"
+ }
+]

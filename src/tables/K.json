@@ -1,0 +1,353 @@
+[
+ {
+  "code": "050",
+  "label": "Arbeitspreis Raumheizung"
+ },
+ {
+  "code": "051",
+  "label": "Netzverlust Raumheizung"
+ },
+ {
+  "code": "052",
+  "label": "Grundpreis Raumheizung"
+ },
+ {
+  "code": "053",
+  "label": "Mengenpreis Raumheizung"
+ },
+ {
+  "code": "054",
+  "label": "Eichgebühr Raumheizung"
+ },
+ {
+  "code": "055",
+  "label": "Umweltschutzkosten Raumheizung"
+ },
+ {
+  "code": "056",
+  "label": "Strom- und Regelkosten Raumheizung"
+ },
+ {
+  "code": "057",
+  "label": "Anschaffungskosten Messeinrichtungen Raumheizung"
+ },
+ {
+  "code": "058",
+  "label": "Servicekosten der Messdienstfirma Raumheizung"
+ },
+ {
+  "code": "059",
+  "label": "Arbeitspreis Warmwasser"
+ },
+ {
+  "code": "060",
+  "label": "Grundpreis Warmwasser"
+ },
+ {
+  "code": "061",
+  "label": "Mengenpreis Warmwasser"
+ },
+ {
+  "code": "062",
+  "label": "Eichgebühr Warmwasser"
+ },
+ {
+  "code": "063",
+  "label": "Umweltschutzkosten Warmwasser"
+ },
+ {
+  "code": "064",
+  "label": "Strom- und Regelkosten Warmwasser"
+ },
+ {
+  "code": "065",
+  "label": "Anschaffungskosten Messeinrichtungen Warmwasser"
+ },
+ {
+  "code": "066",
+  "label": "Servicekosten der Messdienstfirma Warmwasser"
+ },
+ {
+  "code": "067",
+  "label": "Dienstleistung"
+ },
+ {
+  "code": "068",
+  "label": "Gerätevertrag Miete"
+ },
+ {
+  "code": "069",
+  "label": "Gerätevertrag Wartung"
+ },
+ {
+  "code": "070",
+  "label": "Sonstige Leistungen"
+ },
+ {
+  "code": "200",
+  "label": "Anfangsstand"
+ },
+ {
+  "code": "201",
+  "label": "Lieferung / Rechnung"
+ },
+ {
+  "code": "202",
+  "label": "Restbestand"
+ },
+ {
+  "code": "203",
+  "label": "Brennstoffverbrauch"
+ },
+ {
+  "code": "220",
+  "label": "Betriebsstrom"
+ },
+ {
+  "code": "221",
+  "label": "Wartungskosten"
+ },
+ {
+  "code": "222",
+  "label": "Bedienungskosten"
+ },
+ {
+  "code": "223",
+  "label": "Reinigungskosten"
+ },
+ {
+  "code": "224",
+  "label": "Immissionsmessung"
+ },
+ {
+  "code": "225",
+  "label": "Kaminfeger"
+ },
+ {
+  "code": "226",
+  "label": "Tankreinigung"
+ },
+ {
+  "code": "227",
+  "label": "Servicekosten der Messdienstfirma"
+ },
+ {
+  "code": "228",
+  "label": "variables Textfeld HZG + WW"
+ },
+ {
+  "code": "229",
+  "label": "Brennerwartung"
+ },
+ {
+  "code": "230",
+  "label": "Gesamtkosten"
+ },
+ {
+  "code": "231",
+  "label": "Kosten HZG + WW"
+ },
+ {
+  "code": "232",
+  "label": "Kaltwasser für Warmwasser Währungseinheit/Gesamt"
+ },
+ {
+  "code": "233",
+  "label": "Kaltwasser für Warmwasser Währungseinheit/m3"
+ },
+ {
+  "code": "234",
+  "label": "Kosten HZG"
+ },
+ {
+  "code": "235",
+  "label": "Kosten WW"
+ },
+ {
+  "code": "236",
+  "label": "Kosten Frisch- und Abwasser"
+ },
+ {
+  "code": "237",
+  "label": "Kosten Frischwasser"
+ },
+ {
+  "code": "238",
+  "label": "Kosten Abwasser"
+ },
+ {
+  "code": "239",
+  "label": "Kosten Oberflächenentwässerung"
+ },
+ {
+  "code": "240",
+  "label": "Kaltwasser Betrag"
+ },
+ {
+  "code": "241",
+  "label": "Kaltwasser Preis/m3"
+ },
+ {
+  "code": "242",
+  "label": "variables Textfeld BKA"
+ },
+ {
+  "code": "243",
+  "label": "Eichgebühr Kaltwasser"
+ },
+ {
+  "code": "244",
+  "label": "Kaltwasser, Abwasser und weitere (= sonstige kalte) Betriebskosten"
+ },
+ {
+  "code": "245",
+  "label": "Frisch- und Abwasser Preis/m³"
+ },
+ {
+  "code": "246",
+  "label": "Abwasser Preis/m³"
+ },
+ {
+  "code": "247",
+  "label": "Trinkwasserprüfung"
+ },
+ {
+  "code": "248",
+  "label": "Wartung Kaltwasserbereich (z.B. Wasserfilter)"
+ },
+ {
+  "code": "249",
+  "label": "Kanalgebühr"
+ },
+ {
+  "code": "250",
+  "label": "Zwischenablesung"
+ },
+ {
+  "code": "251",
+  "label": "Kosten Nutzerwechsel"
+ },
+ {
+  "code": "252",
+  "label": "Kosten Schätzung"
+ },
+ {
+  "code": "253",
+  "label": "Kosten MwSt-Errechnung"
+ },
+ {
+  "code": "254",
+  "label": "variables Textfeld direktzugeordnete Nebenkosten"
+ },
+ {
+  "code": "255",
+  "label": "Zusätzlicher Ablesetermin"
+ },
+ {
+  "code": "256",
+  "label": "Zwischenablese- und Nutzerwechselkosten"
+ },
+ {
+  "code": "257",
+  "label": "Summe Sonderkosten"
+ },
+ {
+  "code": "258",
+  "label": "Direktkosten (Nutzer)"
+ },
+ {
+  "code": "259",
+  "label": "Weitere Betriebskosten"
+ },
+ {
+  "code": "260",
+  "label": "Nicht umlagefähige Kosten"
+ },
+ {
+  "code": "300",
+  "label": "Gerätemiete Heizkostenverteiler"
+ },
+ {
+  "code": "301",
+  "label": "Gerätemiete Warmwasserzähler"
+ },
+ {
+  "code": "302",
+  "label": "Gerätemiete Wärmemengenzähler"
+ },
+ {
+  "code": "303",
+  "label": "Gerätemiete Kaltwasserzähler"
+ },
+ {
+  "code": "304",
+  "label": "Verbrauchsanalyse"
+ },
+ {
+  "code": "305",
+  "label": "Gerätewartung Warmwasserzähler"
+ },
+ {
+  "code": "306",
+  "label": "Gerätewartung Wärmemengenzähler"
+ },
+ {
+  "code": "307",
+  "label": "Gerätewartung Kaltwasserzähler"
+ },
+ {
+  "code": "308",
+  "label": "Gerätemiete Rauchwarnmelder"
+ },
+ {
+  "code": "309",
+  "label": "Gerätewartung Rauchwarnmelder"
+ },
+ {
+  "code": "310",
+  "label": "Funktionsprüfung Rauchwarnmelder"
+ },
+ {
+  "code": "311",
+  "label": "variables Textfeld Rauchwarnmelder"
+ },
+ {
+  "code": "400",
+  "label": "Allgemeinstrom (nur Hausnebenkosten/Betriebskosten)"
+ },
+ {
+  "code": "901",
+  "label": "Preisbremse Erdgas/Wärme (nach EWPBG)",
+  "extra": {
+   "temporary": "nur Periode 2023/2024"
+  }
+ },
+ {
+  "code": "902",
+  "label": "Staatliche Hilfe Öl/Pellets/Flüssiggas",
+  "extra": {
+   "temporary": "nur Periode 2023/2024"
+  }
+ },
+ {
+  "code": "910",
+  "label": "Preisbremse Strom/Heizenergie (nach StromPBG)",
+  "extra": {
+   "temporary": "nur Periode 2023/2024"
+  }
+ },
+ {
+  "code": "911",
+  "label": "Preisbremse Strom/Betriebsstrom (nach StromPBG)",
+  "extra": {
+   "temporary": "nur Periode 2023/2024"
+  }
+ },
+ {
+  "code": "912",
+  "label": "Preisbremse Strom/Allgemeinstrom (nach StromPBG)",
+  "extra": {
+   "temporary": "nur Periode 2023/2024"
+  }
+ }
+]

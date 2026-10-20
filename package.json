@@ -1,0 +1,58 @@
+{
+  "name": "@heimvio/bved",
+  "version": "0.1.0-dev.1",
+  "description": "Read and write the bved data exchange standard 3.10 (formerly ARGE HeiWaKo) for heating and water cost billing; import master data from CSV.",
+  "license": "MIT",
+  "author": "heimvio",
+  "repository": "github:heimvio/bved",
+  "homepage": "https://github.com/heimvio/bved#readme",
+  "bugs": "https://github.com/heimvio/bved/issues",
+  "keywords": [
+    "bved",
+    "heiwako",
+    "arge-heiwako",
+    "heizkostenabrechnung",
+    "messdienst",
+    "datenaustausch",
+    "csv"
+  ],
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./tables/*.json": "./src/tables/*.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "src/tables/*.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "scripts": {
+    "build": "node scripts/gen-tables.mjs && tsc -p tsconfig.build.json",
+    "gen:tables": "node scripts/gen-tables.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "dependencies": {
+    "fflate": "^0.8.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "typescript": "~5.9.2",
+    "vitest": "^4.0.18"
+  }
+}

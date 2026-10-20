@@ -1,0 +1,90 @@
+[
+ {
+  "code": "310",
+  "label": "Kaltwasser - Boiler"
+ },
+ {
+  "code": "320",
+  "label": "Pauschal - Felder (Basis sind die Gesamtkosten)"
+ },
+ {
+  "code": "321",
+  "label": "Abtrennung lt. Zähler aus Gesamtkosten"
+ },
+ {
+  "code": "322",
+  "label": "Pauschale lt. Angabe der Hausverwaltung"
+ },
+ {
+  "code": "330",
+  "label": "Summe Warmwasserzähler"
+ },
+ {
+  "code": "340",
+  "label": "Gesamtkosten"
+ },
+ {
+  "code": "341",
+  "label": "Grundkosten"
+ },
+ {
+  "code": "342",
+  "label": "Verbrauchskosten"
+ },
+ {
+  "code": "350",
+  "label": "Wärmezähler"
+ },
+ {
+  "code": "352",
+  "label": "Wärmezähler mit Grundkostenanteil"
+ },
+ {
+  "code": "355",
+  "label": "Summe Wärmezähler"
+ },
+ {
+  "code": "357",
+  "label": "Summe Wärmezähler mit Grundkostenanteil"
+ },
+ {
+  "code": "358",
+  "label": "Pauschal nach Fläche"
+ },
+ {
+  "code": "370",
+  "label": "2,5 kWh/(m³*K)*V*(tw – 10°C)"
+ },
+ {
+  "code": "371",
+  "label": "2,5 kWh/(m³*K)*V*(tw – 10°C)*1,11"
+ },
+ {
+  "code": "372",
+  "label": "2,5 kWh/(m³*K)*V*(tw – 10°C)/1,15"
+ },
+ {
+  "code": "373",
+  "label": "32 kWh/m²AWohn*AWohn"
+ },
+ {
+  "code": "374",
+  "label": "32 kWh/m²AWohn*AWohn*1,11"
+ },
+ {
+  "code": "375",
+  "label": "32 kWh/m²AWohn*AWohn/1,15"
+ },
+ {
+  "code": "376",
+  "label": "32 kWh/m²AWohn*AWohn*Gesamtzeitraum/365"
+ },
+ {
+  "code": "377",
+  "label": "32 kWh/m²AWohn*AWohn*1,11*Gesamtzeitraum/365"
+ },
+ {
+  "code": "378",
+  "label": "32 kWh/m²AWohn*AWohn/1,15*Gesamtzeitraum/365"
+ }
+]

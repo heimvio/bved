@@ -1,0 +1,5 @@
+﻿Objekt;Objektbezeichnung;VE-Nr.;VE-Bezeichnung;Art der VE;Straße;Hausnummer;PLZ;Ort;Wohnfläche (m²);Zimmer;Etage
+OBJ-0815;WEG Musterstraße 12;0815.0001;Whg. 1 EG links;Wohnung;Musterstraße;12;12345;Musterstadt;65,50;3;EG
+OBJ-0815;WEG Musterstraße 12;0815.0002;Whg. 2 EG rechts;Wohnung;Musterstraße;12;12345;Musterstadt;80,25;4;EG
+OBJ-0815;WEG Musterstraße 12;0815.0003;Whg. 3 1. OG links;Wohnung;Musterstraße;12;12345;Musterstadt;45,00;2;1. OG
+OBJ-0815;WEG Musterstraße 12;0815.0004;Whg. 4 1. OG rechts;Wohnung;Musterstraße;12;12345;Musterstadt;1.000,00;5;1. OG

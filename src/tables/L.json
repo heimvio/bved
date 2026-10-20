@@ -1,0 +1,27 @@
+[
+ {
+  "code": "00",
+  "label": "keine steuerliche Leistungsart"
+ },
+ {
+  "code": "11",
+  "label": "Haushaltsnahe geringfügige Beschäftigungsverhältnisse",
+  "extra": {
+   "law": "§35a Abs.1 EStG"
+  }
+ },
+ {
+  "code": "12",
+  "label": "Haushaltsnahe geringfügige Beschäftigungsverhältnisse, die nicht unter Abs.1 oder 3 fallen",
+  "extra": {
+   "law": "§35a Abs.2 EStG"
+  }
+ },
+ {
+  "code": "13",
+  "label": "Handwerkerleistungen",
+  "extra": {
+   "law": "§35a Abs.3 EStG"
+  }
+ }
+]

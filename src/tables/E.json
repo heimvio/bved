@@ -1,0 +1,118 @@
+[
+ {
+  "code": "001",
+  "label": "GJ"
+ },
+ {
+  "code": "002",
+  "label": "MWh"
+ },
+ {
+  "code": "003",
+  "label": "m3"
+ },
+ {
+  "code": "004",
+  "label": "kcal"
+ },
+ {
+  "code": "005",
+  "label": "kWh"
+ },
+ {
+  "code": "010",
+  "label": "m2 Wohnfläche"
+ },
+ {
+  "code": "011",
+  "label": "m2 beheizte Wohnfläche"
+ },
+ {
+  "code": "012",
+  "label": "m3 umbauter Raum"
+ },
+ {
+  "code": "014",
+  "label": "m3 beheizter umbauter Wohnraum"
+ },
+ {
+  "code": "015",
+  "label": "variables Textfeld für Schlüssel"
+ },
+ {
+  "code": "016",
+  "label": "Miteigentumsanteil"
+ },
+ {
+  "code": "017",
+  "label": "m2 Nutzfläche"
+ },
+ {
+  "code": "020",
+  "label": "Anschlusswert"
+ },
+ {
+  "code": "021",
+  "label": "Zähler"
+ },
+ {
+  "code": "022",
+  "label": "Wohnung"
+ },
+ {
+  "code": "023",
+  "label": "Abrechnung"
+ },
+ {
+  "code": "030",
+  "label": "Verbrauchseinheiten (VE)"
+ },
+ {
+  "code": "031",
+  "label": "Verbrauchswerte"
+ },
+ {
+  "code": "032",
+  "label": "Striche (Venturi)"
+ },
+ {
+  "code": "033",
+  "label": "1000 J/Sec."
+ },
+ {
+  "code": "034",
+  "label": "Personen x Monate"
+ },
+ {
+  "code": "035",
+  "label": "Personen"
+ },
+ {
+  "code": "040",
+  "label": "Prozent"
+ },
+ {
+  "code": "041",
+  "label": "Jahr"
+ },
+ {
+  "code": "042",
+  "label": "Monat"
+ },
+ {
+  "code": "043",
+  "label": "Tage"
+ },
+ {
+  "code": "044",
+  "label": "Gradtage"
+ },
+ {
+  "code": "045",
+  "label": "‰ – Anteile"
+ },
+ {
+  "code": "046",
+  "label": "Anzahl Rauchwarnmelder"
+ }
+]

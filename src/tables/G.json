@@ -1,0 +1,62 @@
+[
+ {
+  "code": "400",
+  "label": "Heizkostenverteiler nach dem Verdunstungsprinzip"
+ },
+ {
+  "code": "401",
+  "label": "elektronische Heizkostenverteiler"
+ },
+ {
+  "code": "402",
+  "label": "Wärmezähler gesamt für Heizung und Warmwasser"
+ },
+ {
+  "code": "403",
+  "label": "Kaltwasserzähler"
+ },
+ {
+  "code": "404",
+  "label": "Warmwasserzähler"
+ },
+ {
+  "code": "405",
+  "label": "Wärmezähler für Warmwasser"
+ },
+ {
+  "code": "406",
+  "label": "Wärmezähler für Heizung"
+ },
+ {
+  "code": "407",
+  "label": "Warmwasserkostenverteiler auf Verdunstungsbasis"
+ },
+ {
+  "code": "408",
+  "label": "Warmwasserkostenverteiler nach mechanischem Prinzip"
+ },
+ {
+  "code": "409",
+  "label": "Kondensatzähler Heizung"
+ },
+ {
+  "code": "410",
+  "label": "Kondensatzähler Warmwasser"
+ },
+ {
+  "code": "411",
+  "label": "Ölzähler"
+ },
+ {
+  "code": "412",
+  "label": "Stromzähler"
+ },
+ {
+  "code": "413",
+  "label": "Gaszähler"
+ },
+ {
+  "code": "414",
+  "label": "Rohrwärmeabgabe nach VDI2077, Beiblatt (fiktives Gerät)"
+ }
+]
