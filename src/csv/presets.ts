@@ -25,6 +25,7 @@ export type TargetField =
   | 'occupancy.postalCode'
   | 'occupancy.city'
   | 'occupancy.externalRef'
+  | 'occupancy.email'
   | 'contact.externalRef'
   | 'ignore';
 
@@ -50,6 +51,7 @@ export const TARGET_FIELDS: TargetField[] = [
   'occupancy.postalCode',
   'occupancy.city',
   'occupancy.externalRef',
+  'occupancy.email',
   'contact.externalRef',
   'ignore',
 ];
@@ -108,6 +110,7 @@ const CITY = ['Ort', 'Stadt', 'Wohnort'];
 const CONTACT_REF = ['Kontakt-Nr.', 'Kontaktnummer', 'Kontakt-ID', 'Kontakt', 'Adress-Nr.', 'Adressnummer', 'Adress-ID', 'Personen-Nr.', 'Personennummer'];
 const PERSONS = ['Personen', 'Personenanzahl', 'Anzahl Personen', 'Pers.', 'Personenzahl'];
 const FIRST_NAME = ['Vorname', 'Vornamen'];
+const EMAIL = ['E-Mail', 'Email', 'E-Mail-Adresse', 'Mail', 'Mailadresse'];
 
 export const CSV_PRESETS: CsvPreset[] = [
   {
@@ -155,6 +158,7 @@ export const CSV_PRESETS: CsvPreset[] = [
       'occupancy.houseNumber': HOUSE_NO,
       'occupancy.postalCode': POSTAL,
       'occupancy.city': CITY,
+      'occupancy.email': EMAIL,
     },
   },
   {
@@ -201,6 +205,7 @@ export const CSV_PRESETS: CsvPreset[] = [
       'occupancy.houseNumber': ['Hausnummer', 'Hausnr.', 'Hausnr', 'Haus-Nr.'],
       'occupancy.postalCode': POSTAL,
       'occupancy.city': CITY,
+      'occupancy.email': EMAIL,
     },
   },
   {
@@ -229,6 +234,7 @@ export const CSV_PRESETS: CsvPreset[] = [
       'occupancy.street': ['Anschrift Nutzer', 'Straße Nutzer', 'Mieter Straße'],
       'occupancy.postalCode': ['PLZ Nutzer'],
       'occupancy.city': ['Ort Nutzer'],
+      'occupancy.email': EMAIL,
       'occupancy.externalRef': ['Nutzer-Nr.', 'Nutzernummer', 'Mieter-Nr.', 'Vertragsnummer', 'Ordnungsbegriff'],
       'contact.externalRef': CONTACT_REF,
     },

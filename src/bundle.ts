@@ -55,6 +55,8 @@ export interface BundleOccupancy {
   /** Name 1–4, ohne Anrede */
   names: string[];
   address?: { street?: string; postalCode?: string; city?: string; country?: string };
+  /** E-Mail-Adresse des Nutzers (nur CSV; der bved-Standard kennt kein Mailfeld). */
+  email?: string;
   /** ISO; to = null: offen */
   from: string;
   to: string | null;

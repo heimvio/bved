@@ -158,7 +158,11 @@ function joinStreet(street?: string, no?: string): string | undefined {
 interface Contact {
   names: string[];
   address?: BundleOccupancy['address'];
+  email?: string;
 }
+
+/** Bewusst schlicht: ein @ mit Text davor und einem Punkt im Teil danach, kein Leerzeichen. */
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /**
  * Baut aus mehreren CSV-Dateien ein Bundle. Reihenfolge der Auswertung:
@@ -228,6 +232,17 @@ export function bundleFromCsv(files: { name: string; bytes: Uint8Array; mapping?
   const src = (file: string, row: number, column?: string): SourceRef => ({ file, row, ...(column ? { column } : {}) });
   const err = (severity: Finding['severity'], code: string, message: string, source: SourceRef): void => {
     findings.push({ severity, code, message, source });
+  };
+
+  /** E-Mail-Spalte lesen; eine ungültige Adresse wird nicht übernommen (Warnung). */
+  const takeEmail = (get: Getter, col: (t: TargetField) => string | undefined, file: string, line: number): string | undefined => {
+    const raw = get('occupancy.email');
+    if (raw === undefined) return undefined;
+    if (!EMAIL_RE.test(raw)) {
+      err('warning', 'csv_email_invalid', `E-Mail „${raw}“ ist keine gültige Adresse — nicht übernommen`, src(file, line, col('occupancy.email')));
+      return undefined;
+    }
+    return raw;
   };
 
   const takeProperty = (get: Getter, s: SourceRef): void => {
@@ -305,7 +320,8 @@ export function bundleFromCsv(files: { name: string; bytes: Uint8Array; mapping?
       const address = Object.fromEntries(
         Object.entries({ street, postalCode: get('occupancy.postalCode'), city: get('occupancy.city') }).filter(([, v]) => v !== undefined),
       ) as NonNullable<BundleOccupancy['address']>;
-      contacts.set(ref, { names, ...(Object.keys(address).length > 0 ? { address } : {}) });
+      const email = takeEmail(get, col, d.info.name, row.line);
+      contacts.set(ref, { names, ...(Object.keys(address).length > 0 ? { address } : {}), ...(email ? { email } : {}) });
     }
   }
 
@@ -395,6 +411,7 @@ export function bundleFromCsv(files: { name: string; bytes: Uint8Array; mapping?
         Object.entries({ street, postalCode: get('occupancy.postalCode'), city: get('occupancy.city') }).filter(([, v]) => v !== undefined),
       ) as NonNullable<BundleOccupancy['address']>;
       const address = Object.keys(ownAddr).length > 0 ? ownAddr : contact?.address;
+      const email = kind === 'vacancy' ? undefined : (takeEmail(get, col, d.info.name, row.line) ?? contact?.email);
       const extRef = get('occupancy.externalRef');
       bundle.occupancies.push({
         unitRef,
@@ -402,6 +419,7 @@ export function bundleFromCsv(files: { name: string; bytes: Uint8Array; mapping?
         kind,
         names,
         ...(address ? { address } : {}),
+        ...(email ? { email } : {}),
         from,
         to,
         ...(persons !== undefined ? { persons } : {}),

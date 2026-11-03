@@ -137,6 +137,10 @@ describe('bundleFromCsv: vier Dateien zusammenführen', () => {
     expect(bundle.occupancies[5]!.address).toEqual({ street: 'Am Eigentum 5', postalCode: '54321', city: 'Eigenheim' });
   });
 
+  it('E-Mail aus der Kontaktdatei landet am Mieter', () => {
+    expect(bundle.occupancies.filter((o) => o.email !== undefined).map((o) => [o.unitRef, o.kind, o.email])).toEqual([['0815.0001', 'tenant', 'erika@example.org']]);
+  });
+
   it('nur Hinweise für nicht übernommene Spalten, keine Fehler', () => {
     expect(bundle.findings.filter((f) => f.severity !== 'info')).toEqual([]);
     expect(bundle.findings.map((f) => `${f.source?.file}:${f.source?.column}`)).toEqual([
@@ -146,7 +150,6 @@ describe('bundleFromCsv: vier Dateien zusammenführen', () => {
       `${MIETER}:Telefon`,
       `${EIG}:MEA`,
       `${KONT}:Anrede`,
-      `${KONT}:E-Mail`,
       `${KONT}:Telefon`,
     ]);
     expect(bundle.findings[0]).toMatchObject({ code: 'csv_unmapped_column', severity: 'info', source: { row: 1 } });
@@ -207,6 +210,36 @@ describe('Befunde je Zeile und Spalte', () => {
     };
     const { bundle } = bundleFromCsv([{ name: 'liste.csv', bytes: encodeLatin9(text), mapping }]);
     expect(bundle.occupancies).toEqual([expect.objectContaining({ unitRef: 'W1', kind: 'owner', names: ['Ute'], from: '2024-01-01', to: null })]);
+  });
+
+  it('E-Mail-Spalte: Synonyme, eigene Spalte vor Kontaktdatei, ungültige Adresse nur Warnung', () => {
+    for (const head of ['E-Mail', 'Email', 'E-Mail-Adresse', 'Mail', 'Mailadresse']) {
+      for (const preset of ['immoware24-mieter', 'immoware24-kontakte', 'generisch']) {
+        const p = CSV_PRESETS.find((x) => x.id === preset)!;
+        expect(p.synonyms['occupancy.email'], `${preset}: ${head}`).toContain(head);
+      }
+    }
+    expect(CSV_PRESETS.find((x) => x.id === 'immoware24-eigentuemer')!.synonyms['occupancy.email']).toBeUndefined();
+
+    const mieter = csv('mieter.csv', 'VE-Nr.;Mieter;Mietbeginn;Kontakt-Nr.;Mailadresse\nW1;A;01.01.2025;K1;a@mieter.de\nW2;B;01.01.2025;K2;\nW1;C;01.02.2025;;kein-at\n');
+    expect(inspectCsv('mieter.csv', mieter.bytes).mapping.columns['Mailadresse']).toBe('occupancy.email');
+    const kont = csv('kontakte.csv', 'Kontakt-Nr.;Name;E-Mail-Adresse\nK1;A;a@kontakt.de\nK2;B;b@kontakt.de\n');
+    const { bundle } = bundleFromCsv([ve, kont, mieter]);
+    expect(bundle.occupancies.map((o) => [o.names[0], o.email ?? null])).toEqual([
+      ['A', 'a@mieter.de'],
+      ['B', 'b@kontakt.de'],
+      ['C', null],
+    ]);
+    expect(bundle.findings.filter((f) => f.code === 'csv_email_invalid').map((f) => [f.severity, f.source?.file, f.source?.row, f.source?.column])).toEqual([
+      ['warning', 'mieter.csv', 4, 'Mailadresse'],
+    ]);
+  });
+
+  it('Leerstand bekommt keine E-Mail', () => {
+    const mieter = csv('mieter.csv', 'VE-Nr.;Mieter;Mietbeginn;Email\nW1;Leerstand;01.01.2025;x@y.de\n');
+    const { bundle } = bundleFromCsv([ve, mieter]);
+    expect(bundle.occupancies).toEqual([expect.objectContaining({ kind: 'vacancy' })]);
+    expect(bundle.occupancies[0]!.email).toBeUndefined();
   });
 
   it('Titelzeilen vor dem Kopf werden übersprungen', () => {
