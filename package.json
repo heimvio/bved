@@ -1,6 +1,6 @@
 {
   "name": "@heimvio/bved",
-  "version": "0.1.0-dev.2",
+  "version": "0.1.0-dev.3",
   "description": "Read and write the bved data exchange standard 3.10 (formerly ARGE HeiWaKo) for heating and water cost billing; import master data from CSV.",
   "license": "MIT",
   "author": "heimvio",

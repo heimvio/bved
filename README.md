@@ -54,6 +54,8 @@ Each record is `{ type, version, line, fields }`. Field values are typed by the 
 | period `TTMMJJTTMMJJ` | `'2025-01-01/2025-12-31'` |
 | blank | `null` — blank and zero are different things in this standard |
 
+In the bundle, each fuel (B record) carries its sequence number `seq` (B field 23), the calorific value or annual performance factor `calorificValue` (field 9), opening and closing stock with date, quantity, gross and net (fields 10–17), the hot water figures `hotWaterTemp`/`hotWaterVolume`/`hotWaterPct` (fields 18–20) and the meter fields `meterNo`/`meterConsumption`/`meterStart`/`meterEnd` (fields 30–33). Each cost (K record) carries `fuelSeq` (field 15, `0` → `null`) and a `vatRate` derived from gross and net — the standard has no VAT field: `(gross/net − 1)·100` to one decimal, snapped to 0, 7 or 19 within ±0.5, otherwise kept as computed with an info finding `bved_vat_rate_derived` (`deriveVatRate(gross, net)` is exported).
+
 Problems are reported as findings (`{ severity, code, message, source: { file, row, field } }`), for example `bved_line_length`, `bved_required_missing`, `bved_numeric_invalid`, `bved_unknown_record`, `bved_version_unsupported`, `bved_encoding_utf8`.
 
 ## Writing

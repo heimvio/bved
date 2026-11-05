@@ -76,7 +76,7 @@ describe('bundleFromBved', () => {
 
   it('Brennstoff und Kosten', () => {
     expect(b.fuels).toEqual([
-      expect.objectContaining({ fuelKey: '194', quantity: 150000, startStock: null, endStock: null, primaryEnergyFactor: null }),
+      expect.objectContaining({ fuelKey: '194', seq: 1, quantity: 150000, startStock: null, endStock: null, primaryEnergyFactor: null }),
     ]);
     expect(b.costs.map((c) => [c.costKey, c.gross, c.net, c.laborAmount, c.taxServiceKey, c.fuelKey ?? null, c.scope])).toEqual([
       ['201', 18450, 15504.2, null, '00', '194', 'E'],
@@ -88,6 +88,14 @@ describe('bundleFromBved', () => {
     ]);
     expect(b.costs[0]).toMatchObject({ co2Kg: 30150, quantity: 150000, invoiceDate: '2025-12-31' });
     expect(b.costs[4]!.label).toBe('Legionellenprüfung');
+    expect(b.costs.map((c) => [c.fuelSeq, c.vatRate])).toEqual([
+      [1, 19],
+      [1, 19],
+      [1, 19],
+      [1, 19],
+      [1, 19],
+      [null, 7],
+    ]);
   });
 
   it('JSON-tauglich (reist als Payload an die Datenbank)', () => {

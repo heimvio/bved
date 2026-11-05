@@ -67,10 +67,43 @@ export interface BundleOccupancy {
 export interface BundleFuel {
   /** Tabelle B */
   fuelKey: string;
+  /** B Feld 23: laufende Nummer der Brennstoffart (1–9) — Zuordnung zu K-Sätzen (K Feld 15). */
+  seq: number;
+  /** Summe der Liefermengen (K 201 derselben Folge); null ohne Lieferung. */
   quantity?: number | null;
   unitKey?: string;
+  /** B Feld 9: Heizwert in kWh je Brennstoffeinheit bzw. Jahresarbeitszahl (Wärmepumpe). */
+  calorificValue?: number | null;
+  /** B Feld 10: Datum Anfangsbestand (ISO yyyy-mm-dd). */
+  startStockDate?: string | null;
+  /** B Feld 11: Anfangsbestand Menge. */
   startStock?: number | null;
+  /** B Feld 12: Anfangsbestand brutto. */
+  startStockGross?: number | null;
+  /** B Feld 13: Anfangsbestand netto. */
+  startStockNet?: number | null;
+  /** B Feld 14: Datum Endbestand (ISO yyyy-mm-dd). */
+  endStockDate?: string | null;
+  /** B Feld 15: Endbestand Menge. */
   endStock?: number | null;
+  /** B Feld 16: Endbestand brutto. */
+  endStockGross?: number | null;
+  /** B Feld 17: Endbestand netto. */
+  endStockNet?: number | null;
+  /** B Feld 18: Warmwassertemperatur in °C. */
+  hotWaterTemp?: number | null;
+  /** B Feld 19: Warmwassermenge in m³. */
+  hotWaterVolume?: number | null;
+  /** B Feld 20: Anteil Warmwasser am Brennstoff in % (§ 9 HeizkostenV). */
+  hotWaterPct?: number | null;
+  /** B Feld 30: Zählernummer. */
+  meterNo?: string | null;
+  /** B Feld 32: Zählerstand Anfang. */
+  meterStart?: number | null;
+  /** B Feld 33: Zählerstand Ende. */
+  meterEnd?: number | null;
+  /** B Feld 31: Verbrauch laut Zähler. */
+  meterConsumption?: number | null;
   primaryEnergyFactor?: number | null;
   source?: SourceRef;
 }
@@ -81,12 +114,20 @@ export interface BundleCost {
   label?: string;
   gross: number;
   net?: number | null;
+  /**
+   * USt-Satz in %, abgeleitet aus gross/net (der Standard hat kein Feld):
+   * (gross/net − 1)·100 auf eine Nachkommastelle; innerhalb ±0,5 von 0, 7
+   * oder 19 dieser Satz, sonst der gerechnete Wert und Befund info
+   * `bved_vat_rate_derived`. Ohne net (oder net = 0) null.
+   */
   vatRate?: number | null;
   laborAmount?: number | null;
   /** Tabelle L */
   taxServiceKey?: string;
   invoiceDate?: string;
   fuelKey?: string;
+  /** K Feld 15: laufende Nummer der Brennstoffart (B Feld 23); 0 = kein Brennstoff → null. */
+  fuelSeq?: number | null;
   quantity?: number | null;
   co2Kg?: number | null;
   /** Erweiterung: K-Satz Feld 8 (E, H, W, K, A, B). */
@@ -367,9 +408,24 @@ export function bundleFromBved(files: ParsedBvedFile[]): MasterDataBundle {
       .filter((q): q is number => q !== null);
     b.fuels.push({
       fuelKey: key,
+      seq,
       quantity: delivered.length > 0 ? round(delivered.reduce((a, c) => a + c, 0), 3) : null,
+      calorificValue: num(f['calorificValue']),
+      startStockDate: str(f['startStockDate']) ?? null,
       startStock: num(f['startStockQty']),
+      startStockGross: num(f['startStockGross']),
+      startStockNet: num(f['startStockNet']),
+      endStockDate: str(f['endStockDate']) ?? null,
       endStock: num(f['endStockQty']),
+      endStockGross: num(f['endStockGross']),
+      endStockNet: num(f['endStockNet']),
+      hotWaterTemp: num(f['hotWaterTemp']),
+      hotWaterVolume: num(f['hotWaterVolume']),
+      hotWaterPct: num(f['hotWaterPct']),
+      meterNo: str(f['meterNo'] ?? null) ?? null,
+      meterStart: num(f['meterStart'] ?? null),
+      meterEnd: num(f['meterEnd'] ?? null),
+      meterConsumption: num(f['meterConsumption'] ?? null),
       primaryEnergyFactor: num(f['primaryEnergyFactor'] ?? null),
       source: src(x),
     });
@@ -388,16 +444,26 @@ export function bundleFromBved(files: ParsedBvedFile[]): MasterDataBundle {
     }
     const seq = num(f['fuelSeq']);
     const fuelKey = seq ? fuelBySeq.get(seq) : undefined;
+    const vat = deriveVatRate(gross, net);
+    if (vat.derived) {
+      findings.push({
+        severity: 'info',
+        code: 'bved_vat_rate_derived',
+        message: `Kostenart ${costKey}: USt-Satz aus brutto ${gross} / netto ${net} gerechnet (${vat.rate} %), kein Regelsatz 0/7/19`,
+        source: src(x),
+      });
+    }
     b.costs.push({
       costKey,
       ...(str(f['costLabel']) ? { label: str(f['costLabel'])! } : {}),
       gross,
       net,
-      vatRate: null,
+      vatRate: vat.rate,
       laborAmount: num(f['laborAmount']),
       ...(str(f['taxServiceKey']) ? { taxServiceKey: str(f['taxServiceKey'])! } : {}),
       ...(str(f['invoiceDate']) ? { invoiceDate: str(f['invoiceDate'])! } : {}),
       ...(fuelKey ? { fuelKey } : {}),
+      fuelSeq: seq ? seq : null,
       quantity: num(f['quantity']),
       co2Kg: num(f['co2Kg'] ?? null),
       ...(str(f['costScope']) ? { scope: str(f['costScope'])! } : {}),
@@ -406,6 +472,22 @@ export function bundleFromBved(files: ParsedBvedFile[]): MasterDataBundle {
     });
   }
   return b;
+}
+
+const VAT_RATES = [0, 7, 19];
+
+/**
+ * USt-Satz aus brutto/netto: (gross/net − 1)·100 auf eine Nachkommastelle.
+ * Liegt der Wert innerhalb ±0,5 von 0, 7 oder 19, gilt dieser Satz; sonst
+ * der gerechnete Wert (`derived = true`, der Aufrufer meldet einen Befund).
+ * Ohne net (null) oder mit net = 0 ist der Satz unbestimmt (null).
+ */
+export function deriveVatRate(gross: number | null, net: number | null): { rate: number | null; derived: boolean } {
+  if (gross === null || net === null || net === 0) return { rate: null, derived: false };
+  const raw = round((gross / net - 1) * 100, 1);
+  const std = VAT_RATES.find((r) => Math.abs(raw - r) <= 0.5);
+  if (std !== undefined) return { rate: std, derived: false };
+  return { rate: raw === 0 ? 0 : raw, derived: true };
 }
 
 function round(n: number, d: number): number {

@@ -37,7 +37,7 @@ export type {
   BundleCost,
   ShareCategory,
 } from './bundle.js';
-export { bundleFromBved, mergeBundles, emptyBundle } from './bundle.js';
+export { bundleFromBved, mergeBundles, emptyBundle, deriveVatRate } from './bundle.js';
 export type { OutboundData, OutboundUser, OutboundLine, OutboundS35a, OutboundDocument } from './outbound.js';
 export { buildOutbound } from './outbound.js';
 export { zipFiles, unzipFiles } from './zip.js';
